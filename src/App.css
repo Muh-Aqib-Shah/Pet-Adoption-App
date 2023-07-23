@@ -77,3 +77,11 @@
   background-color: red;
   color: white;
 }
+.srch-container{
+  height: 100vh;
+  background-color: springgreen;
+  width: 30vw;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
