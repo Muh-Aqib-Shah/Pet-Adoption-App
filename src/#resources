@@ -1,0 +1,2 @@
+`https://pets-vs.dev-apis/breeds?animal={animal}`
+Animals = ['bird','cat','dog','rabbit','reptile']

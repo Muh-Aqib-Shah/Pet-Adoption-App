@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+.home{
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bar{
+  height: 10vh;
+  font-size: xx-large;
+  font-weight: 600;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Search{
+  margin-top: 10%;
+  height: 4vh;
   display: flex;
-  flex-direction: column;
+  justify-content: flex-end;
+}
+.srch-button{
+  background-color: lightgray;
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  color: white;
+  border-radius: 10px 10px 10px 10px;
+}
+.srch-button:hover{
+  background-color: gray;
+}
+.container{
+  margin: 5%;
+  margin-top: 10%;
+  width: 90%;
+}
+.grid-cont{
+  width: 100%;
+  height: auto;
+}
+
+.PetBox{
+  height: 50vh;
+  width: 100%;
+ border-bottom: 2px solid black;
+ border-right: 1px solid black;
+ 
+}
+.img-box{
+  height:60%;
+  width: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.img{
+  border-radius: 50%;
+  height: 80%;
+  width: 80%;
+  background-color: violet;
+}
+.desc-box{
+  height: 40%;
+}
+.pet-name{
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  font-size: x-large;
+}
+.pet-type{
+  height: 30%;
+  font-size: large;
+  background-color: slateblue;
+}
+.adopt-btn{
+  width: 90%;
+  margin: 5%;
+  height: 25%;
+  border-radius: 10px 10px 10px 10px;
+  background-color: red;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
