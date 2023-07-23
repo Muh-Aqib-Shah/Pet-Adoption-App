@@ -1,7 +1,6 @@
 .home{
   height: 100vh;
 }
-
 .bar{
   height: 10vh;
   font-size: xx-large;
@@ -23,6 +22,17 @@
 }
 .srch-button:hover{
   background-color: gray;
+}
+@keyframes DrawIn {
+  from {transform: translate(100%);}
+  to {transform: translate(0%);}
+}
+.srch-button:active{
+  background-color: green;
+}
+.home .srch-button:active .srch-container{
+  animation: DrawIn 1s linear 2s;
+  animation-fill-mode: forwards;
 }
 .container{
   margin: 5%;
@@ -77,11 +87,57 @@
   background-color: red;
   color: white;
 }
+
 .srch-container{
   height: 100vh;
-  background-color: springgreen;
   width: 30vw;
+  background-color: wheat;
   position: absolute;
   right: 0;
   top: 0;
+  transform: translateX(100%);
+}
+form{
+  font-size: larger;
+  font-weight: 400;
+}
+input,select{
+  width: 90%;
+  height: 3vh;
+}
+.form-container{
+  height: 70%;
+  margin-top: 20%;
+}
+.message-block{
+  display: flex;
+  justify-content: space-around;
+  height: 20%;
+
+}
+.srch-logo{
+  width: 100px;
+  height: 100px;
+}
+.srch-msg{
+  height: 100%;
+  width: 80%;
+  font-size: x-large;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.submit-btn{
+  height: 6vh;
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+}
+.sub-btn{
+  border-radius: 50%;
+  width: 20%;
+  height: 100%;
+  background-color: red;
+  color: white;
 }
