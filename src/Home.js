@@ -2,37 +2,52 @@ import { AppBar, Box, Grid, IconButton, Paper, Toolbar } from "@mui/material";
 import HomeIcon from '@mui/icons-material/Home';
 import SearchIcon from '@mui/icons-material/Search';
 import { SearchForm } from "./SearchForm";
+import { useEffect, useState } from "react";
+import { Pets } from "@mui/icons-material";
 
 export const Home = () => {
+
    
-    let myArr = ["a","b","c","d","e","f","g","h","i","j","k","l","m"]
+   let [pets,SetPets] = useState()
     
-    function HandleClick(){
-        let mn = document.getElementById("srch-box")
-        mn.style.animationPlayState = "running"
-        
+    useEffect(()=>{
+        requestAnimals()
+    },[])
+    
+    async function requestAnimals(){
+        let pets_list = await fetch(`https://pets-v2.dev-apis.com/pets`)
+        let pets_list_json = await pets_list.json()
+        console.log("SAT=>",pets_list_json.pets)
+        SetPets(pets_list_json.pets)
     }
+
+    function StartAnimation(){
+        let SearchBox = document.getElementById("srch-box")
+        SearchBox.style.animationPlayState = "running"   
+    }
+
     return(
         
         <div className="home">
         <AppBar className="bar"><Toolbar><IconButton><HomeIcon fontSize="large" /></IconButton>Pet Shop</Toolbar></AppBar>
         <Box className="Search">
-            <button className="srch-button" onClick={HandleClick}><SearchIcon />Search
-            <SearchForm />
+            <button className="srch-button" onClick={StartAnimation}><SearchIcon />Search
             </button>
+            
         </Box>
+        <SearchForm />
         <hr />
         <Box className="container">
         <Grid container className="grid-cont" spacing={4}>
-            {myArr.map(item =>
+            {pets?.map(item =>
                 <Grid item xs = {3}>
                     <Paper className="PetBox">
                     <Box className="img-box">
-                        <Box className="img"></Box>
+                        <img src={item.images[0]} className="img" />
                     </Box>
                     <Box className="desc-box">
-                        <Box className="pet-name">Luna</Box>
-                        <Box className="pet-type">Dog--Labrador--WA,Seattle</Box>
+                        <Box className="pet-name">{item.name}</Box>
+                        <Box className="pet-type">{item.animal}--{item.breed}--{item.state},{item.city}</Box>
                         <button className="adopt-btn">Adopt Me!</button>
                     </Box>
                     </Paper>

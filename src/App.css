@@ -22,15 +22,7 @@
 }
 .srch-button:hover{
   background-color: gray;
-}
-@keyframes DrawIn {
-  from {transform: translate(100%);}
-  to {transform: translate(0%);}
-}
-.srch-container{
-  animation: DrawIn 1s linear ;
-  animation-fill-mode: forwards;
-  animation-play-state: paused;
+  color: white;
 }
 
 .container{
@@ -46,8 +38,9 @@
 .PetBox{
   height: 50vh;
   width: 100%;
- border-bottom: 2px solid black;
- border-right: 1px solid black;
+ border-bottom: 3px solid grey;
+ border-right: 6px solid grey;
+ 
  
 }
 .img-box{
@@ -56,6 +49,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: darkblue;
 }
 .img{
   border-radius: 50%;
@@ -65,6 +59,7 @@
 }
 .desc-box{
   height: 40%;
+  background-color: bisque;
 }
 .pet-name{
   height: 30%;
@@ -76,6 +71,9 @@
 .pet-type{
   height: 30%;
   font-size: large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: slateblue;
 }
 .adopt-btn{
@@ -86,13 +84,20 @@
   background-color: red;
   color: white;
 }
+@keyframes DrawIn {
+  from {transform: translate(100%);}
+  to {transform: translate(0%);}
+}
 
 .srch-container{
   height: 100vh;
   width: 30vw;
+  animation: DrawIn 1s linear ;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
   background-color: wheat;
   color: black;
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
   transform: translateX(100%);
