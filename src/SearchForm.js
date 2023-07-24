@@ -2,11 +2,12 @@ import Logo2 from './images/petshop_logo (2).png';
 
 export const SearchForm = () => {     
     const ANIMALS = ['Bird','Cat','Dog','Rabbit','Reptile']
+    
     return(
-    <div className="srch-container">
+    <div className="srch-container" id="srch-box">
         <div className="form-container">
             <div className='message-block'>
-           <img className="srch-logo" src={Logo2} />
+           <img className="srch-logo" src={Logo2} alt="logo"/>
            <div className="srch-msg">Search for Pets 
            <br />
            in Your Local Area</div>

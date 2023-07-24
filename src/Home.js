@@ -6,14 +6,21 @@ import { SearchForm } from "./SearchForm";
 export const Home = () => {
    
     let myArr = ["a","b","c","d","e","f","g","h","i","j","k","l","m"]
+    
+    function HandleClick(){
+        let mn = document.getElementById("srch-box")
+        mn.style.animationPlayState = "running"
+        
+    }
     return(
         
         <div className="home">
         <AppBar className="bar"><Toolbar><IconButton><HomeIcon fontSize="large" /></IconButton>Pet Shop</Toolbar></AppBar>
         <Box className="Search">
-            <Box className="srch-button"><SearchIcon />Search</Box>
+            <button className="srch-button" onClick={HandleClick}><SearchIcon />Search
+            <SearchForm />
+            </button>
         </Box>
-        <SearchForm />
         <hr />
         <Box className="container">
         <Grid container className="grid-cont" spacing={4}>
@@ -40,3 +47,5 @@ export const Home = () => {
 
 
 
+// animation: DrawIn 1s linear 2s;
+//animation-fill-mode: forwards;

@@ -17,7 +17,7 @@
   width: 15%;
   display: flex;
   justify-content: center;
-  color: white;
+  color: rgb(24, 19, 19);
   border-radius: 10px 10px 10px 10px;
 }
 .srch-button:hover{
@@ -27,13 +27,12 @@
   from {transform: translate(100%);}
   to {transform: translate(0%);}
 }
-.srch-button:active{
-  background-color: green;
-}
-.home .srch-button:active .srch-container{
-  animation: DrawIn 1s linear 2s;
+.srch-container{
+  animation: DrawIn 1s linear ;
   animation-fill-mode: forwards;
+  animation-play-state: paused;
 }
+
 .container{
   margin: 5%;
   margin-top: 10%;
@@ -92,6 +91,7 @@
   height: 100vh;
   width: 30vw;
   background-color: wheat;
+  color: black;
   position: absolute;
   right: 0;
   top: 0;
