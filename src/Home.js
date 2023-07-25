@@ -2,14 +2,17 @@ import { AppBar, Box, Grid, IconButton, Paper, Toolbar } from "@mui/material";
 import HomeIcon from '@mui/icons-material/Home';
 import SearchIcon from '@mui/icons-material/Search';
 import { SearchForm } from "./SearchForm";
-import { useEffect, useState } from "react";
+import { useEffect, useReducer, useState } from "react";
 import { Pets } from "@mui/icons-material";
+import FilterReducer from './StateReducer';
 
 export const Home = () => {
 
    
    let [pets,SetPets] = useState()
-    
+   let state_copy = [pets,pets]
+    let [state,dispatch] = useReducer(FilterReducer,state_copy)
+
     useEffect(()=>{
         requestAnimals()
     },[])
@@ -35,7 +38,7 @@ export const Home = () => {
             </button>
             
         </Box>
-        <SearchForm />
+        <SearchForm state={state}/>
         <hr />
         <Box className="container">
         <Grid container className="grid-cont" spacing={4}>

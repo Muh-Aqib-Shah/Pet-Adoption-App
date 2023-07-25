@@ -2,10 +2,10 @@ import { useState } from 'react';
 import { useBreedList } from './fetchBreedList';
 import Logo2 from './images/petshop_logo (2).png';
 
-export const SearchForm = () => {     
+export const SearchForm = (state) => {
+    console.log("STATE IS:",state)     
     const ANIMALS = ['Bird','Cat','Dog','Rabbit','Reptile']
     let [animal,SetAnimal] = useState("")
-    console.log("MASTER=>",useBreedList(animal))
 
     //console.log("YOUR BREEDS ARE:",breed)
     return(
