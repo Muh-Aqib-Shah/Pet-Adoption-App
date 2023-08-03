@@ -1,10 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner&family=Mate+SC&family=Victor+Mono:wght@500&display=swap');
+
 .home{
   height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  background-image: url("./images/dogsncats\(2\).jpg");
+  background-size: cover;
+  background-position: 50%;
 }
 .bar{
   height: 10vh;
+  color: white;
+  font-family: 'Mate SC',sans-serif;
   font-size: xx-large;
   font-weight: 600;
+}
+.logo-ctnr{
+  width: 60px;
+  height: fit-content;
+}
+.logo-btn{
+  height: 190%;
+  width: 100%;
 }
 .Search{
   margin-top: 10%;
@@ -34,14 +51,16 @@
   width: 100%;
   height: auto;
 }
+.link-tab{
+  text-decoration: none;
+  box-shadow: 10px 10px 10px green;
+}
 
 .PetBox{
   height: 50vh;
   width: 100%;
  border-bottom: 3px solid grey;
- border-right: 6px solid grey;
- 
- 
+ border-right: 6px solid grey; 
 }
 .img-box{
   height:60%;
@@ -49,33 +68,40 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: darkblue;
+  background-color: rgb(212, 140, 140);
+  border-bottom: 1px solid black;
 }
 .img{
   border-radius: 50%;
   height: 80%;
   width: 80%;
-  background-color: violet;
+  background-color: white;
 }
 .desc-box{
   height: 40%;
-  background-color: bisque;
+  background-color: rgb(212, 140, 140);
 }
+
 .pet-name{
   height: 30%;
   display: flex;
   justify-content: center;
+  font-family: 'Victor Mono',sans-serif;
   font-weight: 600;
-  font-size: x-large;
+  font-size: larger;
 }
 .pet-type{
   height: 30%;
-  font-size: large;
+  font-size: larger;
+  font-weight: 400;
+  text-transform: capitalize;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: slateblue;
+  overflow-wrap: break-word;
+  background-image: linear-gradient(rgb(190, 140, 140),rgb(212, 140, 140),rgb(190, 140, 140));
 }
+
 .adopt-btn{
   width: 90%;
   margin: 5%;
@@ -85,22 +111,20 @@
   color: white;
 }
 @keyframes DrawIn {
-  from {transform: translate(100%);}
-  to {transform: translate(0%);}
+  from {transform: translate(0);}
+  to {transform: translate(-100%);}
 }
 
 .srch-container{
   height: 100vh;
   width: 30vw;
-  animation: DrawIn 1s linear ;
-  animation-fill-mode: forwards;
-  animation-play-state: paused;
+  transform : translateX(100%);
   background-color: wheat;
   color: black;
   position: fixed;
   right: 0;
   top: 0;
-  transform: translateX(100%);
+  
 }
 form{
   font-size: larger;
@@ -145,4 +169,157 @@ input,select{
   height: 100%;
   background-color: red;
   color: white;
+}
+.petCard{
+  height: 100vh;
+  overflow: hidden;
+  background-image: url("images/dogsncats\(1\).png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.SinglePetContainer{
+  margin-top: 15vh;
+  height: 70vh;
+}
+
+.PetCard-top{
+  height: 50%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.PetCard-btm{
+  height: 50%;
+  background-color: slateblue;
+}
+.petImage-Box{
+  background-color: antiquewhite;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./images/petshop_logo\ \(1\).png");
+  background-size: 10%;
+}
+.selected-pet-image{
+  border-radius: 50%;
+  background-color: palevioletred;
+  height: 80%;
+  width: 70%;
+}
+.petImages-cont{
+  width: 60%;
+  height: 100%;
+  background-color: black;
+}
+.nonselectedpet-image{
+  margin: 2%;
+  width: 20%;
+  height: 35%;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+}
+.pet-details{
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: violet;
+  font-size: x-large;
+  font-weight: 400;
+  font-style: oblique;
+  text-transform: capitalize;
+  color: black;
+}
+
+.adpt-me{
+  height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: x-large;
+  font-weight: 600;
+  font-family: 'Edu SA Beginner',sans-serif;  
+
+}
+.pet-desc{
+
+  height: auto;
+  width: auto;
+  background-color: rosybrown;
+  font-size: larger;
+  font-weight: 300;
+  padding: 5%;
+}
+#heroImage{
+  opacity: 0.5;
+}
+._container{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dog_box{
+  width: 200px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  overflow: hidden;
+}
+.no_pets{
+  margin-top: 10vh;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: pink;
+  font-size: xx-large;
+  font-weight: 700;
+  word-spacing: 50px;
+  font-family: monospace;
+}
+
+.dog_box img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;  
+  z-index: 1;
+  overflow: hidden;
+}
+
+.dog_box::before{
+  content: " ";
+  display: block;
+  padding-bottom: 87%;
+
+}
+
+@keyframes DogRun {
+  from {transform: translateY(0);}
+  to {transform: translateY(-100%);}
+}
+
+.dog_walk{
+  animation: DogRun 1s steps(9,end) 0s infinite normal;
+}
+.Wait{
+  height: 40vh;
+  width: 20vw;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size:xx-large;
+  font-weight: 500;
+  color: darkred;
+}
+span{
+  background-color: white;
+}
+.btn{
+  border-radius: 50%;
+  margin: 10px;
 }
